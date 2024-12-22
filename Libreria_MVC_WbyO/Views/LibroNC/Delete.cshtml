@@ -1,0 +1,57 @@
+﻿@model Libreria_MVC_WbyO.Models.Libro
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<@{
+    ViewBag.Title = "Eliminar";
+}
+
+<h2>Eliminar</h2>
+<h3>¿Estás seguro de que quieres eliminar este libro?</h3>
+
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            <h4>Detalles del Libro</h4>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Nombre)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Nombre)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Costo_total)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Costo_total)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Costo_Renta)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Costo_Renta)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Disponible)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Disponible)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Autor.Nombre)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Autor.Nombre)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Categoria.Nombre)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Categoria.Nombre)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Editorial.Nombre)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Editorial.Nombre)</dd>
+            </dl>
+
+            @using (Html.BeginForm()) {
+                @Html.AntiForgeryToken()
+
+                <div class="form-group text-center">
+                    <input type="submit" value="Eliminar" class="btn btn-danger btn-lg" />
+                </div>
+            }
+        </div>
+        <div class="card-footer text-end">
+            <p>
+                @Html.ActionLink("Regresar..", "Index", null, new { @class = "btn btn-secondary" })
+            </p>
+        </div>
+    </div>
+</div>

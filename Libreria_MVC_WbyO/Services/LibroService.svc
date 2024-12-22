@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Libreria_MVC_WbyO.Services.LibroService" CodeBehind="LibroService.svc.cs" %>

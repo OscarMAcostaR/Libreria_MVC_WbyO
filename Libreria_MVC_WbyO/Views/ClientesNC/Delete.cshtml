@@ -1,0 +1,54 @@
+﻿@model Libreria_MVC_WbyO.Models.Cliente
+
+@{
+    ViewBag.Title = "Eliminar Cliente";
+}
+
+<h2 class="text-center mb-4">Eliminar Cliente</h2>
+
+<h3 class="text-center mb-4">¿Estás seguro de que deseas eliminar este cliente?</h3>
+
+<div class="container mt-4">
+    <div class="card shadow-lg">
+        <div class="card-body">
+            <h4 class="card-title mb-4">Información del Cliente</h4>
+            <dl class="row">
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Nombre)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Nombre)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.A_Paterno)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.A_Paterno)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.A_Materno)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.A_Materno)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Telefono)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Telefono)</dd>
+
+                <dt class="col-sm-3">@Html.DisplayNameFor(model => model.Correo)</dt>
+                <dd class="col-sm-9">@Html.DisplayFor(model => model.Correo)</dd>
+            </dl>
+        </div>
+
+        <div class="card-footer text-end">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar cliente">Eliminar</button>
+                    <a href="@Url.Action("Index")" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Regresar a la lista">Regresar a la Lista</a>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(function () {
+            // Activar los tooltips de Bootstrap
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+}
+

@@ -1,0 +1,26 @@
+﻿@model Libreria_MVC_WbyO.Models.EstadoFisico
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EstadoFisico</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EstadoFisico1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstadoFisico1)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id_Estado }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

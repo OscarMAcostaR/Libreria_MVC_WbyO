@@ -1,0 +1,42 @@
+﻿@model Libreria_MVC_WbyO.Models.Autor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Autor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido_P)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellido_P)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido_M)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellido_M)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id_Autor }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

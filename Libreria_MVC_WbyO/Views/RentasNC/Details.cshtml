@@ -1,0 +1,58 @@
+﻿@model Libreria_MVC_WbyO.Models.Renta
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Renta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_Salida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Salida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_Entrega)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Entrega)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstadoFisico.EstadoFisico1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstadoFisico.EstadoFisico1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Libro.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Libro.Nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id_Renta }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

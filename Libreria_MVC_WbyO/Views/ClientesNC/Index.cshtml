@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Libreria_MVC_WbyO.Models.Cliente>
+
+@{
+    ViewBag.Title = "Lista de Clientes";
+}
+
+<div class="container mt-4">
+    <h2 class="bg-info text-white p-3 rounded">Lista de Clientes</h2>
+
+    <p>
+        <!-- Crear un nuevo cliente -->
+        @Html.ActionLink("Nuevo Cliente", "Create", null, new { @class = "btn btn-primary" })
+    </p>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.A_Paterno)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.A_Materno)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Telefono)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Correo)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.A_Paterno)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.A_Materno)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Telefono)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Correo)
+                    </td>
+                    <td>
+                        <!-- Botones de acción como enlaces, ahora con clases de Bootstrap -->
+                        @Html.ActionLink("Editar", "Edit", new { id = item.Id_Cliente }, new { @class = "btn btn-warning btn-sm" }) |
+                        @Html.ActionLink("Detalle", "Details", new { id = item.Id_Cliente }, new { @class = "btn btn-info btn-sm" }) |
+                        @Html.ActionLink("Eliminar", "Delete", new { id = item.Id_Cliente }, new { @class = "btn btn-danger btn-sm" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

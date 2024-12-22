@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35521.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Libreria_MVC_WbyO", "Libreria_MVC_WbyO\Libreria_MVC_WbyO.csproj", "{7055CD6D-6CE8-4499-B099-B85ACDD9596C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "Libreria_MVC_WbyO\DTO\DTO.csproj", "{543D5F38-7DC6-4D0F-8ADE-BE1FFC096652}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7055CD6D-6CE8-4499-B099-B85ACDD9596C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7055CD6D-6CE8-4499-B099-B85ACDD9596C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7055CD6D-6CE8-4499-B099-B85ACDD9596C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7055CD6D-6CE8-4499-B099-B85ACDD9596C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{543D5F38-7DC6-4D0F-8ADE-BE1FFC096652}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{543D5F38-7DC6-4D0F-8ADE-BE1FFC096652}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{543D5F38-7DC6-4D0F-8ADE-BE1FFC096652}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{543D5F38-7DC6-4D0F-8ADE-BE1FFC096652}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
